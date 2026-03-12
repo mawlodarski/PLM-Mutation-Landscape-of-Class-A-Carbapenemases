@@ -26,3 +26,5 @@ SME        5
 # 3 Embedding generation
 esm2_t33_650M_UR50D (1280D)
 PyTorch version: 2.10.0
+
+need to try smaller model + shallow FCN classifier
