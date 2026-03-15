@@ -1,0 +1,28 @@
+“Carbapenem-resistant Enterobacteriaceae are nightmare bacteria.”
+— Tom Frieden, former CDC Director
+
+Carbapenemase-producing bacteria are critical public health threats, with infection mortality rates upwards of ~50%.
+Bacteria have evolved these enzymes that inactivate carbapenems, often considered our last-line antibiotics.
+
+As a small PhD side project, I wanted to see whether protein language models could help map the mutational landscape of carbapenemases.
+
+I trained a neural network classifier on ESM-2 protein embeddings to distinguish class A carbapenemases from closely related non-carbapenemase β-lactamases, then performed exhaustive in-silico mutagenesis of KPC-4.
+
+By scoring every possible amino-acid substitution, the model highlights mutations predicted to disrupt or preserve carbapenemase-associated sequence features.
+
+The result is a complete mutation landscape of KPC-4, revealing which residues could present as future sequence variants or functional carbapenemase mutation trajectories.
+
+Key pieces of the workflow:
+
+• Sequence downloads from CARD
+• Protein language model embeddings (ESM-2)
+• Neural network classifier (PyTorch)
+• Exhaustive mutation scanning
+• Structural visualization with ESMFold
+• Embedding analysis (UMAP)
+
+All code and outputs are available in the repository.
+
+This is a demonstration that protein language model embeddings may be used to map functional mutation landscapes in priority antibiotic resistance genes.
+
+Talk about specific active site residues/structure/heatmaps/umaps
